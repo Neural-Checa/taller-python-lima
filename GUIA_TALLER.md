@@ -29,14 +29,13 @@ preguntas que sí funcionan y el guion de la demo de seguridad.
 
 ## 0–10 · Setup express (`app_0_hola.py`)
 
-**Objetivo:** que TODOS tengan algo corriendo en pantalla y entiendan el modelo de Streamlit.
+**Objetivo:** que TODOS tengan algo corriendo en pantalla y conozcan la bodega.
 
 - Corre `streamlit run app_0_hola.py`.
-- Muestra el botón "Súmame uno". **Punto clave a explicar:** *"Streamlit re-ejecuta
-  todo el script en cada clic. Por eso el contador vive en `session_state`; si no,
-  se reiniciaría a cero cada vez."* Este es el malentendido #1 de Streamlit.
 - Usa el selector de tablas para mostrar la bodega. *"Esta es la base que vamos a
   consultar... pero en español, no eligiendo tablas a mano."*
+- (El modelo de re-ejecución y `session_state` ya se vieron en el mini-taller de
+  Streamlit — `1_hola_widgets.py` —, así que aquí no hace falta repetirlo.)
 
 > Si alguien no instaló nada: que abra el repo y siga; o que se empareje con un vecino.
 

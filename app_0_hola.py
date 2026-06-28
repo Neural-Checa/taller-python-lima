@@ -1,10 +1,8 @@
 """
 CAPA 0 — Hola, Streamlit 👋
 
-Objetivo: entender el modelo de Streamlit ANTES de meter IA.
-  - El script se vuelve a ejecutar de arriba a abajo en CADA interacción.
-  - Por eso, lo que quieras conservar entre clics va en `st.session_state`.
-  - De paso, conocemos la base de datos de la bodega.
+Objetivo: una primera app para ver Streamlit funcionando y, de paso,
+conocer la base de datos de la bodega que luego consultaremos con el agente.
 
 Correr:   streamlit run app_0_hola.py
 """
@@ -25,25 +23,8 @@ st.write(
     "funciona Streamlit."
 )
 
-# --- 1) El modelo de re-ejecución + session_state ----------------------------
-st.subheader("1. ¿Por qué necesito `session_state`?")
-st.write(
-    "Cada vez que tocas un botón, Streamlit **vuelve a correr todo el script**. "
-    "Para que el contador no se reinicie, guardamos su valor en `session_state`."
-)
-
-if "clicks" not in st.session_state:
-    st.session_state.clicks = 0
-
-if st.button("Súmame uno ➕"):
-    st.session_state.clicks += 1
-
-st.metric("Veces que hiciste clic", st.session_state.clicks)
-
-st.divider()
-
-# --- 2) Conozcamos la base de datos ------------------------------------------
-st.subheader("2. Nuestra base de datos: la bodega 🏪")
+# --- Conozcamos la base de datos ---------------------------------------------
+st.subheader("Nuestra base de datos: la bodega 🏪")
 
 con = sqlite3.connect(DB, uri=True)
 tablas = pd.read_sql_query(
