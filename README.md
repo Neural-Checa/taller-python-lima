@@ -25,8 +25,10 @@ Llegar con esto listo es lo que hace que el taller fluya. Por favor hazlo antes.
 git clone <URL-DEL-REPO> taller-python-lima
 cd taller-python-lima
 
-# Crea un entorno virtual con Python 3.11 (o 3.10+)
-python3 -m venv .venv
+# Crea un entorno virtual con Python 3.11 (requiere 3.10+)
+# OJO: usa python3.11 explícito. En macOS, "python3" a secas suele ser el
+# 3.9 del sistema y la instalación fallará (ver "Problemas comunes").
+python3.11 -m venv .venv         # En Windows: py -3.11 -m venv .venv
 source .venv/bin/activate        # En Windows: .venv\Scripts\activate
 
 pip install -r requirements.txt
@@ -120,6 +122,17 @@ público. Pega tu `GROQ_API_KEY` en *Settings → Secrets* de la app (no subas
 
 ## ❓ Problemas comunes
 
+- **`No matching distribution found for streamlit==1.58.0`** → tu venv usa Python < 3.10
+  (en macOS, `python3` suele ser el 3.9 del sistema). Compruébalo con `python --version`
+  y recréalo con la versión correcta:
+  ```bash
+  rm -rf .venv
+  python3.11 -m venv .venv         # En Windows: py -3.11 -m venv .venv
+  source .venv/bin/activate
+  pip install -r requirements.txt
+  ```
+  Si no tienes el 3.11: macOS `brew install python@3.11` · Windows descárgalo de python.org
+  (marca "Add to PATH") · Linux `sudo apt install python3.11 python3.11-venv`.
 - **`KeyError: 'GROQ_API_KEY'`** → te falta crear `.streamlit/secrets.toml` (paso 3).
 - **`No existe data/bodega.db`** → corre `python data/generar_db.py`.
 - **Error de cuota / 429** → es el límite del free tier; espera un minuto o usa otra key.
