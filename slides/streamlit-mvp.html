@@ -46,9 +46,10 @@
   .cover .meta b{color:var(--muted); font-weight:500;}
 
   ul.clean{list-style:none; padding:0; margin:14px 0 0; display:grid; gap:13px;}
-  ul.clean li{display:grid; grid-template-columns:auto 1fr; gap:14px;
-    font-size:clamp(15px,1.8vw,20px); line-height:1.45;}
-  ul.clean li::before{content:"→"; color:var(--accent); font-family:var(--mono);}
+  ul.clean li{position:relative; padding-left:30px;
+    font-size:clamp(15px,1.8vw,20px); line-height:1.5;}
+  ul.clean li::before{content:"→"; position:absolute; left:0; top:0;
+    color:var(--accent); font-family:var(--mono);}
   ul.clean li b{font-weight:620;} ul.clean li span{color:var(--muted);}
 
   .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
