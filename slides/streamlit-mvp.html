@@ -114,7 +114,7 @@
 <div class="progress" id="progress"></div>
 <div class="hud">
   <span class="brand"><b>Python Lima</b> · Meetup #1</span>
-  <span id="counter">01 / 11</span>
+  <span id="counter">01 / 08</span>
 </div>
 
 <div class="deck" id="deck">
@@ -156,30 +156,7 @@
       chat)? Con <b class="accent">st.session_state</b>. Es el error #1 de quien empieza — y el "aha" #1.</p>
   </div></section>
 
-  <!-- 4 ingredientes -->
-  <section class="slide"><div class="inner">
-    <p class="kicker">Los ingredientes</p>
-    <h2>Widgets: tu caja de herramientas</h2>
-    <div class="cards">
-      <div class="card"><div class="tag">Entrada</div><h3>Recoger datos</h3><p><code>text_input</code>, <code>slider</code>, <code>selectbox</code>, <code>file_uploader</code></p></div>
-      <div class="card"><div class="tag">Acción</div><h3>Disparar algo</h3><p><code>button</code>, <code>chat_input</code>, <code>form</code></p></div>
-      <div class="card"><div class="tag">Salida</div><h3>Mostrar</h3><p><code>write</code>, <code>dataframe</code>, <code>bar_chart</code>, <code>metric</code></p></div>
-      <div class="card"><div class="tag">Estado</div><h3>Recordar</h3><p><code>session_state</code>, <code>cache_resource</code></p></div>
-    </div>
-  </div></section>
 
-  <!-- 5 layout -->
-  <section class="slide"><div class="inner">
-    <p class="kicker">Ordenar la pantalla</p>
-    <h2>Layout en segundos</h2>
-    <ul class="clean">
-      <li><b>Columnas</b> <span>— <code>st.columns(3)</code> para poner cosas lado a lado.</span></li>
-      <li><b>Pestañas</b> <span>— <code>st.tabs([...])</code> para separar secciones.</span></li>
-      <li><b>Barra lateral</b> <span>— <code>st.sidebar</code> para filtros y configuración.</span></li>
-      <li><b>Expander</b> <span>— <code>st.expander()</code> para esconder lo secundario (como "Ver el SQL").</span></li>
-    </ul>
-    <p class="note">→ Mira la app <b>2_layout.py</b> del mini-taller.</p>
-  </div></section>
 
   <!-- 6 datos -->
   <section class="slide"><div class="inner">
@@ -211,22 +188,6 @@ prompt = st.<span class="f">text_area</span>(<span class="s">"Pregunta:"</span>)
     <p class="note">Eso de arriba <b class="accent">ya es una app de IA completa</b>. → app <b>4_primer_llm.py</b>.</p>
   </div></section>
 
-  <!-- 8 las 5 apps -->
-  <section class="slide"><div class="inner">
-    <p class="kicker">Tu kit para experimentar</p>
-    <h2>Las 5 mini-apps</h2>
-    <div class="tablewrap"><table>
-      <thead><tr><th>App</th><th>Qué aprendes</th><th>LLM</th></tr></thead>
-      <tbody>
-        <tr><td>1 · widgets</td><td>Widgets + re-ejecución + session_state</td><td class="yn">—</td></tr>
-        <tr><td>2 · layout</td><td>Columnas, pestañas, sidebar, métricas</td><td class="yn">—</td></tr>
-        <tr><td>3 · datos</td><td>Tablas, gráficos y cargar un CSV</td><td class="yn">—</td></tr>
-        <tr><td>4 · primer_llm</td><td>Primera llamada a un LLM, con streaming</td><td class="yn accent">✓</td></tr>
-        <tr><td>5 · mvp_chat</td><td>Un chatbot con memoria, en ~30 líneas</td><td class="yn accent">✓</td></tr>
-      </tbody>
-    </table></div>
-    <p class="note">Carpeta <b>mini-streamlit/</b> — corre cada una con <code>streamlit run mini-streamlit/...</code></p>
-  </div></section>
 
   <!-- 9 cuándo -->
   <section class="slide"><div class="inner">
