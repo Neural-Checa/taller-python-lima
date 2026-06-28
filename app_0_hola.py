@@ -18,10 +18,6 @@ st.set_page_config(page_title="Capa 0 · Hola", page_icon="👋")
 DB = "file:data/bodega.db?mode=ro"
 
 st.title("👋 Hola, Python Lima")
-st.write(
-    "Esta es nuestra primera app. Sin IA todavía: solo entendamos cómo "
-    "funciona Streamlit."
-)
 
 # --- Conozcamos la base de datos ---------------------------------------------
 st.subheader("Nuestra base de datos: la bodega 🏪")
